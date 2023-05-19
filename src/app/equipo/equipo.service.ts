@@ -15,7 +15,7 @@ export class EquipoService {
 
   constructor(private http: HttpClient) { }
 
-  getGrupos(): Observable<Group[]> {
-    return this.http.get<Group[]>(this.apiUrl)
-}
+  getGrupos(): any {
+    return this.http.get<any>(this.apiUrl)
+  }
 }
