@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">Team</th>
+          <th class="h4">Group</th>
+          <th class="h4">Goal Diference</th>
+          <th class="h4">Goals favor</th>
+          <th class="h4">Goals against</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor= "let e of equipos">
+          <td>
+            <dd>{{e.name}}</dd>
+          </td>
+          <td>
+            <dd>{{e.group_letter}}</dd>
+          </td>
+          <td>
+            <dd>{{e.goal_differential}}</dd>
+          </td>
+          <td>
+            <dd>{{e.goals_for}}</dd>
+          </td>
+          <td>
+            <dd>{{e.goals_against}}</dd>
+          </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

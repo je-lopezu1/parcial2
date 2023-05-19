@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PartidoModule } from './partido/partido.module';
 import { HomeModule } from './home/home.module';
 import { AwayModule } from './away/away.module';
+import { EquipoModule } from './equipo/equipo.module';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     PartidoModule,
     HomeModule,
     AwayModule,
+    EquipoModule,
     HttpClientModule
   ],
   providers: [],
