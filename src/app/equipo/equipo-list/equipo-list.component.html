@@ -7,13 +7,13 @@
  <div class="container-fluid">
   <div class="row">
     <div *ngFor="let equipo of equipos" class="col mb-2">
-      <div class="card p-2" style="width: 15rem; height: 8rem">
+      <div class="card p-2" style="width: 15rem; height: 8rem; background-color: rgb(255, 237, 214);">
         <img
           src="{{ equipo.name }}"
           alt="{{ equipo.name }}"
           (click)="onSelected(equipo)"
         />
-        <div class="card-body">
+        <div class="card-body" style="background-color: rgb(245, 181, 91);">
           <h5 class="card-title">{{ equipo.name }}</h5>
           <p class="card-text">[{{ equipo.group_letter}}]</p>
         </div>

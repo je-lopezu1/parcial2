@@ -18,12 +18,13 @@ constructor(private http: HttpClient) { }
 getPartidos(): Observable<Partido[]> {
   return this.http.get<Partido[]>(this.apiUrl);
 }
-ordenarEquipos(partidos: Array<Partido>): void {
-  let equipos: Array<Home> = []
-  //partidos.forEach(partido => {
-    // if(equipos.includes(partido.home_team)){
-    //   equipos.find(partido.home_team).goals += partido.home_team.goals
-    // }
-}
+// ordenarEquipos(partidos: Array<Partido>): void {
+//   let equipos: Array<Home> = []
+//   partidos.forEach(partido => {
+//     if(!equipos.includes(partido.home_team)){
+//       equipos.find(partido.home_team).goals += partido.home_team.goals;
+//     }
+// });
+// }
 }
 

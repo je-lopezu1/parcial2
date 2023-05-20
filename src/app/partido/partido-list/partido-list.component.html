@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="col-6">
-    <table class="table">
-      <thead>
+    <table class="table table-bordered" style = "border-color: bisque;">
+      <thead class = "thead-dark" style = "background-color: bisque;">
         <tr>
           <th class="h4">Location</th>
           <th class="h4">Home</th>
@@ -11,7 +11,7 @@
           <th class="h4">Goals Away</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class = "thead-dark" style = "background-color: rgb(236, 224, 210);">
         <tr *ngFor= "let p of partidos">
           <td>
             <dd>{{p.location}}</dd>
@@ -34,12 +34,9 @@
       </tr>
       </tbody>
     </table>
-  </div>
-</div>
 
-<div class="container-fluid">
-  <div class="col-6">
-    <table class="table">
+    <div class="col-6">
+    <table class="table table-bordered" style = "border-color: bisque;">
       <thead>
         <tr>
           <th class="h4">Equipo</th>
@@ -49,13 +46,15 @@
       <tbody>
         <tr *ngFor= "let e of ordenados">
           <td>
-            <dd>{{e.name}}</dd>
+            <dd>{{e.equipo}}</dd>
           </td>
           <td>
-            <dd>{{e.goals}}</dd>
+            <dd>{{e.goles}}</dd>
           </td>
       </tr>
       </tbody>
     </table>
+
   </div>
+</div>
 </div>
