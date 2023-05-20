@@ -10,6 +10,9 @@ import { Group } from 'src/app/group';
 })
 export class EquipoListComponent implements OnInit {
 
+  selectedEquipo !: Equipo;
+  selected = false;
+
   grupos: Array< Group > = [];
   equipos: Array< Equipo > = [];
 
@@ -17,6 +20,7 @@ export class EquipoListComponent implements OnInit {
 
   getEquipos(): void {
     this.equipoService.getGrupos().subscribe((grupos: { groups: any; }) => {
+
       let tempo: Group[] = [];
       // Crear una lista de los equipos en el mundial
       console.log(grupos.groups);
@@ -28,6 +32,11 @@ export class EquipoListComponent implements OnInit {
       });
       this.grupos = tempo;
   });
+}
+
+onSelected(equipo: Equipo): void {
+  this.selected = true;
+  this.selectedEquipo = equipo;
 }
 
   ngOnInit() {

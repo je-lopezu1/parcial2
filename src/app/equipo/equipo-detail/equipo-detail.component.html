@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{ equipoDetail.name }}</p>
+  <div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col">
+      <dl>
+        <dt>Country</dt>
+        <dd>{{equipoDetail.country}}</dd>
+        <dt>Group</dt>
+        <dd>{{equipoDetail.group_letter}}</dd>
+        <dt>Games Played</dt>
+        <dd>{{equipoDetail.games_played}}</dd>
+        <dt>Group points</dt>
+        <dd>{{equipoDetail.group_points}}</dd>
+        <hr />
+        <dt>Goal in favor</dt>
+        <dd>{{ equipoDetail.goals_for }}</dd>
+        <dt>Goal against</dt>
+        <dd>{{ equipoDetail.goals_against }}</dd>
+        <dt>Goal Difference</dt>
+        <dd>{{ equipoDetail.goal_differential }}</dd>
+        <dt>Wins</dt>
+        <dd>{{ equipoDetail.wins }}</dd>
+        <dt>Losses</dt>
+        <dd>{{ equipoDetail.losses }}</dd>
+        <hr />
+      </dl>
+    </div>
+  </div>
+ </div>
+

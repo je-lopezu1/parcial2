@@ -1,34 +1,23 @@
-<div class="container-fluid">
-  <div class="col-6">
-    <table class="table">
-      <thead>
-        <tr>
-          <th class="h4">Team</th>
-          <th class="h4">Group</th>
-          <th class="h4">Goal Diference</th>
-          <th class="h4">Goals favor</th>
-          <th class="h4">Goals against</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor= "let e of equipos">
-          <td>
-            <dd>{{e.name}}</dd>
-          </td>
-          <td>
-            <dd>{{e.group_letter}}</dd>
-          </td>
-          <td>
-            <dd>{{e.goal_differential}}</dd>
-          </td>
-          <td>
-            <dd>{{e.goals_for}}</dd>
-          </td>
-          <td>
-            <dd>{{e.goals_against}}</dd>
-          </td>
-      </tr>
-      </tbody>
-    </table>
+<div *ngIf="selected">
+  <app-equipo-detail [equipoDetail]="selectedEquipo"></app-equipo-detail>
+ </div>
+
+ <hr />
+
+ <div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let equipo of equipos" class="col mb-2">
+      <div class="card p-2" style="width: 15rem; height: 8rem">
+        <img
+          src="{{ equipo.name }}"
+          alt="{{ equipo.name }}"
+          (click)="onSelected(equipo)"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ equipo.name }}</h5>
+          <p class="card-text">[{{ equipo.group_letter}}]</p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+ </div>

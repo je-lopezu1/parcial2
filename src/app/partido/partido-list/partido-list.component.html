@@ -36,3 +36,26 @@
     </table>
   </div>
 </div>
+
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">Equipo</th>
+          <th class="h4">Goles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor= "let e of ordenados">
+          <td>
+            <dd>{{e.name}}</dd>
+          </td>
+          <td>
+            <dd>{{e.goals}}</dd>
+          </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

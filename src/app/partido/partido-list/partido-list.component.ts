@@ -17,19 +17,12 @@ export class PartidoListComponent implements OnInit {
   getPartidos(): void {
     this.partidoService.getPartidos().subscribe((partidos) => {
       this.partidos = partidos;
-    // Crear lista de equipos home ordenada por goles a favor
-    // for(let partido of this.partidos){
-    //   if (this.ordenados.includes(partido.home_team)) {
-    //     this.ordenados.find(partido.home_team).goals += partido.home_team.goals;
-    //   } else
-    //     this.ordenados.push(partido.home_team);
-    // }
-    // this.ordenados.sort((a,b) => b.goals - a.goals);
-
     });
   }
 
-
+  // order(partidos: Array< Partido >): void {
+  //   this.ordenados = this.partidoService.ordenarEquipos(partidos)
+  // }
 
   ngOnInit() {
     this.getPartidos();
